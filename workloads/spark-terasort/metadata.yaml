@@ -1,0 +1,10 @@
+name: spark-terasort
+
+stack: spark-stack
+
+description: Spark TeraSort benchmark
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

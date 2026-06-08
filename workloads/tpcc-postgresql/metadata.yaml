@@ -1,0 +1,10 @@
+name: tpcc-postgresql
+
+stack: postgres-stack
+
+description: TPC-C benchmark for PostgreSQL
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

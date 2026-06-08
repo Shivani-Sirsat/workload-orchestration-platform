@@ -1,0 +1,10 @@
+name: ycsb-mongodb
+
+stack: mongodb-stack
+
+description: YCSB benchmark for MongoDB
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

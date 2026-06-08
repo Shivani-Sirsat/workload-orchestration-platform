@@ -1,0 +1,10 @@
+name: postgres-stack
+
+version: "16"
+
+description: PostgreSQL software stack
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

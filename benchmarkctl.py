@@ -2,9 +2,15 @@ import typer
 
 from cli.logger import logger
 from cli.config_loader import load_config
+
 from cli.stack_registry import (
     get_stacks,
     get_stack
+)
+
+from cli.workload_registry import (
+    get_workloads,
+    get_workload
 )
 
 app = typer.Typer(
@@ -82,12 +88,13 @@ def report():
 @stack_app.command("list")
 def list_stacks():
 
+    logger.info("Listing software stacks")
+
     stacks = get_stacks()
 
     for stack in stacks:
         print(stack["name"])
 
-    logger.info("Listing software stacks")
 
 @stack_app.command("show")
 def show_stack(stack_name: str):
@@ -110,11 +117,32 @@ def show_stack(stack_name: str):
 
 @workload_app.command("list")
 def list_workloads():
-    """List workloads"""
 
     logger.info("Listing workloads")
 
-    print("Listing workloads...")
+    workloads = get_workloads()
+
+    for workload in workloads:
+        print(workload["name"])
+
+
+@workload_app.command("show")
+def show_workload(workload_name: str):
+
+    workload = get_workload(workload_name)
+
+    if not workload:
+        print("Workload not found")
+        return
+
+    print(f"Name: {workload['name']}")
+    print(f"Stack: {workload['stack']}")
+    print(f"Description: {workload['description']}")
+
+    print("\nSupported Targets:")
+
+    for target in workload["supported_targets"]:
+        print(f"- {target}")
 
 
 if __name__ == "__main__":

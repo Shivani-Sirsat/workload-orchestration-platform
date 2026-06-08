@@ -1,0 +1,10 @@
+name: kafka-stream-benchmark
+
+stack: kafka-stack
+
+description: Kafka streaming benchmark
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

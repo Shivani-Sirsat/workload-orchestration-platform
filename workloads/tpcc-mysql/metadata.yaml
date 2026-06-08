@@ -1,0 +1,10 @@
+name: tpcc-mysql
+
+stack: mysql-stack
+
+description: TPC-C benchmark for MySQL
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

@@ -2,10 +2,16 @@ import typer
 
 from cli.logger import logger
 from cli.config_loader import load_config
-
+from deployments.prerequisites import (
+    validate_prerequisites
+)
+from deployments.deployment_engine import deploy_workload
 from cli.stack_registry import (
     get_stacks,
     get_stack
+)
+from deployments.setup_helper import (
+    run_setup
 )
 
 from cli.workload_registry import (
@@ -50,12 +56,41 @@ def build():
 
 
 @app.command()
-def deploy():
-    """Deploy workload"""
+def deploy(
+    workload_name: str,
+    target: str
+):
 
-    logger.info("Deploy command executed")
+    logger.info(
+        f"Deploying {workload_name} to {target}"
+    )
 
-    print("Deploying workload...")
+    result = deploy_workload(
+        workload_name,
+        target
+    )
+
+    if result["status"] == "failed":
+
+        print(result["message"])
+        return
+
+    print(
+        f"Deploying workload: "
+        f"{result['workload']}"
+    )
+
+    print(
+        f"Using stack: "
+        f"{result['stack']}"
+    )
+
+    print(
+        f"Target: "
+        f"{result['target']}"
+    )
+
+    print("\nDeployment successful")
 
 
 @app.command()
@@ -83,6 +118,24 @@ def report():
     logger.info("Report command executed")
 
     print("Generating reports...")
+
+@app.command()
+def validate():
+
+    results = validate_prerequisites()
+
+    print("\nSystem Validation\n")
+
+    for tool, status in results.items():
+
+        state = "FOUND" if status else "MISSING"
+
+        print(f"{tool}: {state}")
+
+@app.command()
+def setup():
+
+    run_setup()
 
 
 @stack_app.command("list")

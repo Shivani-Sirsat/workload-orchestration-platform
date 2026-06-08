@@ -8,3 +8,4 @@ supported_targets:
   - baremetal
   - docker
   - kubernetes
+  - cloud

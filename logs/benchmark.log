@@ -5,3 +5,16 @@
 2026-06-08 12:59:17,383 - INFO - Listing software stacks
 2026-06-08 15:36:04,012 - INFO - Listing workloads
 2026-06-08 15:39:33,823 - INFO - Listing workloads
+2026-06-08 15:51:28,895 - INFO - Deploying tpcc-mysql to docker
+2026-06-08 15:51:40,243 - INFO - Deploying abc to docker
+2026-06-08 15:51:50,615 - INFO - Deploying tpcc-mysql to vmware
+2026-06-08 15:54:17,889 - INFO - Deploying tpcc-mysql to vmware
+2026-06-08 15:57:20,383 - INFO - Deploying tpcc-mysql to docker
+2026-06-08 15:57:31,176 - INFO - Deploying tpcc-mysql to kubernetes
+2026-06-08 15:57:45,722 - INFO - Deploying tpcc-mysql to baremetal
+2026-06-08 15:57:53,943 - INFO - Deploying tpcc-mysql to cloud
+2026-06-08 16:04:42,295 - INFO - Deploying redis-benchmark to docker
+2026-06-08 16:04:55,240 - INFO - Deploying redis-benchmark to kubernetes
+2026-06-08 16:05:02,593 - INFO - Deploying redis-benchmark to baremetal
+2026-06-08 21:08:23,917 - INFO - Deploying tpcc-mysql to baremetal
+2026-06-08 21:08:33,444 - INFO - Deploying tpcc-mysql to docker

@@ -18,3 +18,6 @@
 2026-06-08 16:05:02,593 - INFO - Deploying redis-benchmark to baremetal
 2026-06-08 21:08:23,917 - INFO - Deploying tpcc-mysql to baremetal
 2026-06-08 21:08:33,444 - INFO - Deploying tpcc-mysql to docker
+2026-06-08 22:32:50,056 - INFO - Deploying redis-benchmark to docker
+2026-06-08 22:33:42,413 - INFO - Deploying redis-benchmark to docker
+2026-06-08 22:34:26,696 - INFO - Deploying redis-benchmark to docker

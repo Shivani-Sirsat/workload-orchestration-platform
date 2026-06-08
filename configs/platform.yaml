@@ -1,0 +1,8 @@
+platform:
+  name: workload-orchestration-platform
+  version: 0.1
+
+deployment_targets:
+  - baremetal
+  - docker
+  - kubernetes

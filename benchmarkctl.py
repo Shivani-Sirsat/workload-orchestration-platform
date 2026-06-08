@@ -2,6 +2,10 @@ import typer
 
 from cli.logger import logger
 from cli.config_loader import load_config
+from cli.stack_registry import (
+    get_stacks,
+    get_stack
+)
 
 app = typer.Typer(
     help="Workload Orchestration Platform"
@@ -77,11 +81,31 @@ def report():
 
 @stack_app.command("list")
 def list_stacks():
-    """List software stacks"""
+
+    stacks = get_stacks()
+
+    for stack in stacks:
+        print(stack["name"])
 
     logger.info("Listing software stacks")
 
-    print("Listing software stacks...")
+@stack_app.command("show")
+def show_stack(stack_name: str):
+
+    stack = get_stack(stack_name)
+
+    if not stack:
+        print("Stack not found")
+        return
+
+    print(f"Name: {stack['name']}")
+    print(f"Version: {stack['version']}")
+    print(f"Description: {stack['description']}")
+
+    print("\nSupported Targets:")
+
+    for target in stack["supported_targets"]:
+        print(f"- {target}")
 
 
 @workload_app.command("list")

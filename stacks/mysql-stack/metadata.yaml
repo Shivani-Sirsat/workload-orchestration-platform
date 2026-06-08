@@ -1,0 +1,10 @@
+name: mysql-stack
+
+version: "8.0"
+
+description: MySQL software stack
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

@@ -1,0 +1,10 @@
+name: mongodb-stack
+
+version: "8.0"
+
+description: MongoDB software stack
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

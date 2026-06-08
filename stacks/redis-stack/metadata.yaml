@@ -1,0 +1,10 @@
+name: redis-stack
+
+version: "7.0"
+
+description: Redis software stack
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

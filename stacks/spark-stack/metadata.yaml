@@ -1,0 +1,10 @@
+name: spark-stack
+
+version: "3.5"
+
+description: Apache Spark software stack
+
+supported_targets:
+  - baremetal
+  - docker
+  - kubernetes

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: tpcc-postgresql
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: tpcc-postgresql
+
+  template:
+
+    metadata:
+      labels:
+        app: tpcc-postgresql
+
+    spec:
+
+      containers:
+
+      - name: postgres
+
+        image: postgres:16
+
+        env:
+        - name: POSTGRES_PASSWORD
+          value: postgres
+
+        - name: POSTGRES_DB
+          value: tpcc
+
+        ports:
+        - containerPort: 5432

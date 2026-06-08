@@ -21,3 +21,4 @@
 2026-06-08 22:32:50,056 - INFO - Deploying redis-benchmark to docker
 2026-06-08 22:33:42,413 - INFO - Deploying redis-benchmark to docker
 2026-06-08 22:34:26,696 - INFO - Deploying redis-benchmark to docker
+2026-06-08 22:41:59,233 - INFO - Deploying tpcc-postgresql to kubernetes

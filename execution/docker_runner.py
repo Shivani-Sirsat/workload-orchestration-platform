@@ -51,6 +51,7 @@ def run(workload_name):
 
         save_result(
             workload_name,
+            "docker",
             kpis
         )
 

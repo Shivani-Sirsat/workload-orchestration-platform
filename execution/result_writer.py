@@ -9,6 +9,7 @@ RESULTS_DIR = Path("results")
 
 def save_result(
     workload_name,
+    target,
     result
 ):
 
@@ -31,13 +32,24 @@ def save_result(
         f"{timestamp}.json"
     )
 
+    metadata = {
+        "timestamp": timestamp,
+        "workload": workload_name,
+        "target": target,
+        "host": "local"
+    }
+
+    metadata.update(
+        result
+    )
+
     with open(
         file_path,
         "w"
     ) as file:
 
         json.dump(
-            result,
+            metadata,
             file,
             indent=4
         )

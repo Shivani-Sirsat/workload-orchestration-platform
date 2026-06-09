@@ -1,5 +1,17 @@
 import subprocess
 
+from execution.kpi_parser import (
+    parse_redis_kpi
+)
+
+from execution.result_writer import (
+    save_result
+)
+
+from execution.log_writer import (
+    save_log
+)
+
 
 def run(workload_name):
 
@@ -28,9 +40,23 @@ def run(workload_name):
                 "message": result.stderr
             }
 
+        save_log(
+            workload_name,
+            result.stdout
+        )
+
+        kpis = parse_redis_kpi(
+            result.stdout
+        )
+
+        save_result(
+            workload_name,
+            kpis
+        )
+
         return {
             "status": "success",
-            "output": result.stdout
+            "output": kpis
         }
 
     return {

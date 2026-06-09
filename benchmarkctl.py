@@ -2,6 +2,9 @@ import typer
 
 from cli.logger import logger
 from cli.config_loader import load_config
+from execution.result_reader import (
+    load_result
+)
 from execution.execution_engine import (
     execute_workload
 )
@@ -102,6 +105,10 @@ def run(
     target: str
 ):
 
+    logger.info(
+        f"Executing {workload_name} on {target}"
+    )
+
     result = execute_workload(
         workload_name,
         target
@@ -116,17 +123,42 @@ def run(
         return
 
     print(
-        result["output"]
+        "\nBenchmark KPIs\n"
     )
+
+    for key, value in result["output"].items():
+
+        print(
+            f"{key}: {value}"
+        )
 
 
 @app.command()
-def kpi():
-    """Show KPIs"""
+def kpi(
+    workload_name: str
+):
 
-    logger.info("KPI command executed")
+    result = load_result(
+        workload_name
+    )
 
-    print("Showing KPIs...")
+    if not result:
+
+        print(
+            "No KPI found"
+        )
+
+        return
+
+    print(
+        "\nStored KPIs\n"
+    )
+
+    for key, value in result.items():
+
+        print(
+            f"{key}: {value}"
+        )
 
 
 @app.command()

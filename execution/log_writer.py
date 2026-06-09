@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import datetime
 
 
 LOGS_DIR = Path("logs")
@@ -9,13 +10,23 @@ def save_log(
     output
 ):
 
-    LOGS_DIR.mkdir(
+    workload_dir = (
+        LOGS_DIR /
+        workload_name
+    )
+
+    workload_dir.mkdir(
+        parents=True,
         exist_ok=True
     )
 
+    timestamp = datetime.now().strftime(
+        "%Y%m%d_%H%M%S"
+    )
+
     file_path = (
-        LOGS_DIR /
-        f"{workload_name}.log"
+        workload_dir /
+        f"{timestamp}.log"
     )
 
     with open(

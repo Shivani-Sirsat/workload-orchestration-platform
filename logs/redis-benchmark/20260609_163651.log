@@ -1,0 +1,351 @@
+ 
+PING_INLINE: rps=0.0 (overall: -nan) avg_msec=-nan (overall: -nan)
+                                                                   
+PING_INLINE: rps=122669.3 (overall: 122669.3) avg_msec=0.222 (overall: 0.222)
+                                                                              
+PING_INLINE: rps=96020.0 (overall: 109371.3) avg_msec=0.296 (overall: 0.254)
+                                                                             
+PING_INLINE: rps=106036.6 (overall: 108273.1) avg_msec=0.253 (overall: 0.254)
+                                                                              
+PING_INLINE: 108459.87 requests per second, p50=0.231 msec
+ 
+PING_MBULK: rps=35032.0 (overall: 119972.6) avg_msec=0.225 (overall: 0.225)
+                                                                            
+PING_MBULK: rps=124556.0 (overall: 123520.1) avg_msec=0.219 (overall: 0.221)
+                                                                             
+PING_MBULK: rps=89235.1 (overall: 108527.9) avg_msec=0.323 (overall: 0.257)
+                                                                            
+PING_MBULK: rps=115168.0 (overall: 110542.5) avg_msec=0.233 (overall: 0.250)
+                                                                             
+PING_MBULK: 109529.02 requests per second, p50=0.215 msec
+ 
+SET: rps=61796.8 (overall: 96943.8) avg_msec=0.288 (overall: 0.288)
+                                                                    
+SET: rps=98068.0 (overall: 97629.3) avg_msec=0.289 (overall: 0.289)
+                                                                    
+SET: rps=109235.1 (overall: 102036.3) avg_msec=0.252 (overall: 0.274)
+                                                                      
+SET: rps=101460.0 (overall: 101878.2) avg_msec=0.277 (overall: 0.275)
+                                                                      
+SET: 100300.91 requests per second, p50=0.239 msec
+ 
+GET: rps=66748.0 (overall: 103006.2) avg_msec=0.260 (overall: 0.260)
+                                                                     
+GET: rps=109640.0 (overall: 107031.6) avg_msec=0.245 (overall: 0.251)
+                                                                      
+GET: rps=97860.6 (overall: 103559.6) avg_msec=0.281 (overall: 0.262)
+                                                                     
+GET: rps=117112.0 (overall: 107270.5) avg_msec=0.232 (overall: 0.253)
+                                                                      
+GET: 107526.88 requests per second, p50=0.231 msec
+ 
+INCR: rps=105448.0 (overall: 114121.2) avg_msec=0.236 (overall: 0.236)
+                                                                       
+INCR: rps=112191.2 (overall: 113116.2) avg_msec=0.244 (overall: 0.240)
+                                                                       
+INCR: rps=106168.0 (overall: 110743.2) avg_msec=0.257 (overall: 0.246)
+                                                                       
+INCR: 108108.11 requests per second, p50=0.231 msec
+ 
+LPUSH: rps=22936.0 (overall: 104254.5) avg_msec=0.260 (overall: 0.260)
+                                                                       
+LPUSH: rps=120298.8 (overall: 117415.0) avg_msec=0.231 (overall: 0.236)
+                                                                        
+LPUSH: rps=122512.0 (overall: 119706.8) avg_msec=0.226 (overall: 0.231)
+                                                                        
+LPUSH: rps=123920.0 (overall: 121013.6) avg_msec=0.218 (overall: 0.227)
+                                                                        
+LPUSH: 120918.98 requests per second, p50=0.215 msec
+ 
+RPUSH: rps=105613.6 (overall: 115759.8) avg_msec=0.230 (overall: 0.230)
+                                                                        
+RPUSH: rps=128908.0 (overall: 122622.1) avg_msec=0.213 (overall: 0.221)
+                                                                        
+RPUSH: rps=116756.0 (overall: 120610.4) avg_msec=0.232 (overall: 0.225)
+                                                                        
+RPUSH: 121212.12 requests per second, p50=0.215 msec
+ 
+LPOP: rps=67572.0 (overall: 111138.2) avg_msec=0.249 (overall: 0.249)
+                                                                      
+LPOP: rps=121609.6 (overall: 117660.0) avg_msec=0.223 (overall: 0.232)
+                                                                       
+LPOP: rps=123228.0 (overall: 119791.7) avg_msec=0.224 (overall: 0.229)
+                                                                       
+LPOP: 119047.62 requests per second, p50=0.215 msec
+ 
+RPOP: rps=32780.0 (overall: 132177.4) avg_msec=0.212 (overall: 0.212)
+                                                                      
+RPOP: rps=122362.6 (overall: 124306.7) avg_msec=0.222 (overall: 0.220)
+                                                                       
+RPOP: rps=126072.0 (overall: 125090.6) avg_msec=0.214 (overall: 0.217)
+                                                                       
+RPOP: 125156.45 requests per second, p50=0.207 msec
+ 
+SADD: rps=6184.0 (overall: 128833.3) avg_msec=0.213 (overall: 0.213)
+                                                                     
+SADD: rps=122498.0 (overall: 122787.1) avg_msec=0.227 (overall: 0.226)
+                                                                       
+SADD: rps=127576.0 (overall: 125120.9) avg_msec=0.217 (overall: 0.222)
+                                                                       
+SADD: rps=119624.0 (overall: 123319.8) avg_msec=0.220 (overall: 0.221)
+                                                                       
+SADD: 123456.79 requests per second, p50=0.207 msec
+ 
+HSET: rps=90676.0 (overall: 112781.1) avg_msec=0.249 (overall: 0.249)
+                                                                      
+HSET: rps=124290.8 (overall: 119172.6) avg_msec=0.225 (overall: 0.235)
+                                                                       
+HSET: rps=122476.0 (overall: 120349.0) avg_msec=0.231 (overall: 0.234)
+                                                                       
+HSET: 121212.12 requests per second, p50=0.215 msec
+ 
+SPOP: rps=60820.0 (overall: 121640.0) avg_msec=0.217 (overall: 0.217)
+                                                                      
+SPOP: rps=114004.0 (overall: 116542.6) avg_msec=0.234 (overall: 0.228)
+                                                                       
+SPOP: rps=120520.0 (overall: 118131.0) avg_msec=0.224 (overall: 0.226)
+                                                                       
+SPOP: 119189.52 requests per second, p50=0.215 msec
+ 
+ZADD: rps=17600.0 (overall: 122222.2) avg_msec=0.227 (overall: 0.227)
+                                                                      
+ZADD: rps=120043.8 (overall: 120317.1) avg_msec=0.234 (overall: 0.233)
+                                                                       
+ZADD: rps=122448.0 (overall: 121309.1) avg_msec=0.222 (overall: 0.228)
+                                                                       
+ZADD: rps=116488.0 (overall: 119777.6) avg_msec=0.238 (overall: 0.231)
+                                                                       
+ZADD: 118764.84 requests per second, p50=0.215 msec
+ 
+ZPOPMIN: rps=83123.5 (overall: 106994.9) avg_msec=0.252 (overall: 0.252)
+                                                                         
+ZPOPMIN: rps=105900.0 (overall: 106379.8) avg_msec=0.247 (overall: 0.249)
+                                                                          
+ZPOPMIN: rps=106992.0 (overall: 106600.0) avg_msec=0.251 (overall: 0.250)
+                                                                          
+ZPOPMIN: 106269.93 requests per second, p50=0.231 msec
+ 
+LPUSH (needed to benchmark LRANGE): rps=1625.5 (overall: 102000.0) avg_msec=0.218 (overall: 0.218)
+                                                                                                   
+LPUSH (needed to benchmark LRANGE): rps=114160.0 (overall: 113968.5) avg_msec=0.244 (overall: 0.244)
+                                                                                                     
+LPUSH (needed to benchmark LRANGE): rps=104588.0 (overall: 109315.5) avg_msec=0.266 (overall: 0.254)
+                                                                                                     
+LPUSH (needed to benchmark LRANGE): rps=118589.6 (overall: 112398.7) avg_msec=0.229 (overall: 0.245)
+                                                                                                     
+LPUSH (needed to benchmark LRANGE): 113378.68 requests per second, p50=0.223 msec
+ 
+LRANGE_100 (first 100 elements): rps=30508.0 (overall: 62516.4) avg_msec=0.426 (overall: 0.426)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=58183.3 (overall: 59600.5) avg_msec=0.457 (overall: 0.446)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=50346.6 (overall: 55878.2) avg_msec=0.532 (overall: 0.478)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=59464.0 (overall: 56903.9) avg_msec=0.449 (overall: 0.469)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=46446.2 (overall: 54570.7) avg_msec=0.588 (overall: 0.492)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=27290.8 (overall: 49594.5) avg_msec=1.055 (overall: 0.548)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=38956.0 (overall: 47958.8) avg_msec=0.759 (overall: 0.575)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=36398.4 (overall: 46412.9) avg_msec=0.803 (overall: 0.598)
+                                                                                                
+LRANGE_100 (first 100 elements): rps=39474.1 (overall: 45594.5) avg_msec=0.748 (overall: 0.614)
+                                                                                                
+LRANGE_100 (first 100 elements): 45289.86 requests per second, p50=0.495 msec
+ 
+LRANGE_300 (first 300 elements): rps=11836.7 (overall: 17579.9) avg_msec=1.451 (overall: 1.451)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=18677.3 (overall: 18235.7) avg_msec=1.353 (overall: 1.391)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=17044.0 (overall: 17791.0) avg_msec=1.496 (overall: 1.428)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=18095.6 (overall: 17874.1) avg_msec=1.399 (overall: 1.420)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=21533.9 (overall: 18657.8) avg_msec=1.179 (overall: 1.361)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=22374.5 (overall: 19313.4) avg_msec=1.132 (overall: 1.314)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=22067.7 (overall: 19726.4) avg_msec=1.145 (overall: 1.286)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=16677.3 (overall: 19328.8) avg_msec=1.528 (overall: 1.313)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=18960.0 (overall: 19286.4) avg_msec=1.348 (overall: 1.317)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=20988.0 (overall: 19462.5) avg_msec=1.196 (overall: 1.303)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=19653.4 (overall: 19480.4) avg_msec=1.325 (overall: 1.305)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=19676.0 (overall: 19497.1) avg_msec=1.292 (overall: 1.304)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=21152.0 (overall: 19627.3) avg_msec=1.215 (overall: 1.297)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=21498.0 (overall: 19764.3) avg_msec=1.197 (overall: 1.289)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=19063.7 (overall: 19716.5) avg_msec=1.341 (overall: 1.292)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=18301.6 (overall: 19625.8) avg_msec=1.377 (overall: 1.297)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=19507.9 (overall: 19618.7) avg_msec=1.311 (overall: 1.298)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=18012.0 (overall: 19527.7) avg_msec=1.407 (overall: 1.304)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=19293.7 (overall: 19515.2) avg_msec=1.305 (overall: 1.304)
+                                                                                                
+LRANGE_300 (first 300 elements): rps=19112.0 (overall: 19494.7) avg_msec=1.329 (overall: 1.305)
+                                                                                                
+LRANGE_300 (first 300 elements): 19516.00 requests per second, p50=1.223 msec
+ 
+LRANGE_500 (first 500 elements): rps=3669.3 (overall: 15098.4) avg_msec=1.726 (overall: 1.726)
+                                                                                               
+LRANGE_500 (first 500 elements): rps=11322.7 (overall: 12060.9) avg_msec=2.300 (overall: 2.160)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=2966.9 (overall: 7825.3) avg_msec=8.220 (overall: 3.230)
+                                                                                              
+LRANGE_500 (first 500 elements): rps=7306.8 (overall: 7669.5) avg_msec=3.755 (overall: 3.380)
+                                                                                              
+LRANGE_500 (first 500 elements): rps=12756.0 (overall: 8841.5) avg_msec=1.969 (overall: 2.911)
+                                                                                               
+LRANGE_500 (first 500 elements): rps=15147.4 (overall: 10026.2) avg_msec=1.665 (overall: 2.558)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=14920.0 (overall: 10797.6) avg_msec=1.698 (overall: 2.370)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=13673.3 (overall: 11190.5) avg_msec=1.853 (overall: 2.284)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=14613.5 (overall: 11602.0) avg_msec=1.747 (overall: 2.203)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=14104.0 (overall: 11869.5) avg_msec=1.795 (overall: 2.151)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=10753.0 (overall: 11761.3) avg_msec=2.371 (overall: 2.170)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=15726.2 (overall: 12113.0) avg_msec=1.601 (overall: 2.105)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=12111.6 (overall: 12112.9) avg_msec=2.106 (overall: 2.105)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=10262.9 (overall: 11974.0) avg_msec=2.546 (overall: 2.133)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=12450.2 (overall: 12007.2) avg_msec=2.010 (overall: 2.124)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=11972.3 (overall: 12004.9) avg_msec=2.089 (overall: 2.122)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=6238.3 (overall: 11645.1) avg_msec=4.134 (overall: 2.189)
+                                                                                               
+LRANGE_500 (first 500 elements): rps=9613.5 (overall: 11528.0) avg_msec=2.681 (overall: 2.213)
+                                                                                               
+LRANGE_500 (first 500 elements): rps=13561.8 (overall: 11638.9) avg_msec=1.839 (overall: 2.189)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=13027.8 (overall: 11710.9) avg_msec=2.120 (overall: 2.185)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=5290.8 (overall: 11395.5) avg_msec=5.529 (overall: 2.261)
+                                                                                               
+LRANGE_500 (first 500 elements): rps=10565.2 (overall: 11356.3) avg_msec=2.487 (overall: 2.271)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=13192.0 (overall: 11438.1) avg_msec=1.908 (overall: 2.253)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=9555.6 (overall: 11357.2) avg_msec=2.720 (overall: 2.270)
+                                                                                               
+LRANGE_500 (first 500 elements): rps=11632.0 (overall: 11368.4) avg_msec=2.203 (overall: 2.267)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=15330.7 (overall: 11524.7) avg_msec=1.665 (overall: 2.235)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=16226.2 (overall: 11703.7) avg_msec=1.565 (overall: 2.200)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=16502.0 (overall: 11879.1) avg_msec=1.532 (overall: 2.166)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=12277.8 (overall: 11893.2) avg_msec=2.157 (overall: 2.166)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=15282.9 (overall: 12008.7) avg_msec=1.649 (overall: 2.143)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=16426.3 (overall: 12154.2) avg_msec=1.544 (overall: 2.117)
+                                                                                                
+LRANGE_500 (first 500 elements): rps=15284.0 (overall: 12253.6) avg_msec=1.633 (overall: 2.097)
+                                                                                                
+LRANGE_500 (first 500 elements): 12379.30 requests per second, p50=1.751 msec
+ 
+LRANGE_600 (first 600 elements): rps=2200.0 (overall: 13095.2) avg_msec=1.993 (overall: 1.993)
+                                                                                               
+LRANGE_600 (first 600 elements): rps=13353.2 (overall: 13316.3) avg_msec=1.894 (overall: 1.908)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=13880.5 (overall: 13576.1) avg_msec=1.825 (overall: 1.869)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=13832.7 (overall: 13657.0) avg_msec=1.836 (overall: 1.858)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=14390.4 (overall: 13832.9) avg_msec=1.763 (overall: 1.835)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=14470.1 (overall: 13956.1) avg_msec=1.757 (overall: 1.819)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=14664.0 (overall: 14070.4) avg_msec=1.720 (overall: 1.802)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12127.0 (overall: 13798.3) avg_msec=2.069 (overall: 1.835)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11374.5 (overall: 13501.7) avg_msec=2.231 (overall: 1.876)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11619.4 (overall: 13299.4) avg_msec=2.189 (overall: 1.905)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11167.3 (overall: 13089.4) avg_msec=2.253 (overall: 1.934)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11920.3 (overall: 12984.6) avg_msec=2.108 (overall: 1.949)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11617.5 (overall: 12872.2) avg_msec=2.163 (overall: 1.965)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=13293.7 (overall: 12904.3) avg_msec=1.890 (overall: 1.959)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11208.0 (overall: 12785.0) avg_msec=2.286 (overall: 1.979)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11404.8 (overall: 12693.6) avg_msec=2.196 (overall: 1.992)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12326.7 (overall: 12670.9) avg_msec=2.056 (overall: 1.996)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=13701.2 (overall: 12730.9) avg_msec=1.823 (overall: 1.985)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12672.0 (overall: 12727.7) avg_msec=2.007 (overall: 1.986)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11515.9 (overall: 12664.2) avg_msec=2.194 (overall: 1.996)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=10876.0 (overall: 12575.8) avg_msec=2.321 (overall: 2.010)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12254.0 (overall: 12560.5) avg_msec=2.063 (overall: 2.012)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12051.8 (overall: 12537.6) avg_msec=2.094 (overall: 2.016)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=13400.8 (overall: 12575.0) avg_msec=1.869 (overall: 2.009)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12088.0 (overall: 12554.9) avg_msec=2.091 (overall: 2.012)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12753.0 (overall: 12562.8) avg_msec=1.990 (overall: 2.011)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=11252.0 (overall: 12512.9) avg_msec=2.247 (overall: 2.020)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=5699.2 (overall: 12257.1) avg_msec=4.473 (overall: 2.062)
+                                                                                               
+LRANGE_600 (first 600 elements): rps=9227.1 (overall: 12149.6) avg_msec=2.730 (overall: 2.080)
+                                                                                               
+LRANGE_600 (first 600 elements): rps=13669.3 (overall: 12201.7) avg_msec=1.842 (overall: 2.071)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=13334.7 (overall: 12239.2) avg_msec=1.879 (overall: 2.064)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=12936.5 (overall: 12261.7) avg_msec=1.965 (overall: 2.061)
+                                                                                                
+LRANGE_600 (first 600 elements): rps=13047.6 (overall: 12286.2) avg_msec=1.930 (overall: 2.057)
+                                                                                                
+LRANGE_600 (first 600 elements): 12285.01 requests per second, p50=1.927 msec
+ 
+MSET (10 keys): rps=83696.0 (overall: 113102.7) avg_msec=0.265 (overall: 0.265)
+                                                                                
+MSET (10 keys): rps=121537.9 (overall: 117958.7) avg_msec=0.241 (overall: 0.251)
+                                                                                 
+MSET (10 keys): rps=118772.0 (overall: 118255.1) avg_msec=0.261 (overall: 0.254)
+                                                                                 
+MSET (10 keys): 117096.02 requests per second, p50=0.223 msec
+ 
+XADD: rps=34744.0 (overall: 108575.0) avg_msec=0.261 (overall: 0.261)
+                                                                      
+XADD: rps=103888.5 (overall: 105021.1) avg_msec=0.279 (overall: 0.274)
+                                                                       
+XADD: rps=114448.0 (overall: 109077.5) avg_msec=0.245 (overall: 0.261)
+                                                                       
+XADD: rps=117388.0 (overall: 111577.6) avg_msec=0.242 (overall: 0.255)
+                                                                       
+XADD: 111482.72 requests per second, p50=0.223 msec
+

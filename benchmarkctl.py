@@ -11,6 +11,9 @@ from execution.execution_engine import (
 from deployments.prerequisites import (
     validate_prerequisites
 )
+from execution.history_reader import (
+    load_history
+)
 from deployments.deployment_engine import deploy_workload
 from cli.stack_registry import (
     get_stacks,
@@ -18,6 +21,10 @@ from cli.stack_registry import (
 )
 from deployments.setup_helper import (
     run_setup
+)
+
+from execution.compare_reader import (
+    load_latest_two_runs
 )
 
 from cli.workload_registry import (
@@ -160,6 +167,97 @@ def kpi(
             f"{key}: {value}"
         )
 
+@app.command()
+def history(
+    workload_name: str
+):
+
+    history = load_history(
+        workload_name
+    )
+
+    if not history:
+
+        print(
+            "No history found"
+        )
+
+        return
+
+    print(
+        f"\nExecution History: {workload_name}\n"
+    )
+
+    for run in history:
+
+        print(
+            f"Run: {run['run']}"
+        )
+
+        for key, value in run["kpis"].items():
+
+            print(
+                f"  {key}: {value}"
+            )
+
+        print()
+
+@app.command()
+def compare(
+    workload_name: str
+):
+
+    previous, latest = (
+        load_latest_two_runs(
+            workload_name
+        )
+    )
+
+    if not previous:
+
+        print(
+            "Need at least 2 runs"
+        )
+
+        return
+
+    print(
+        "\nComparing Latest Two Runs\n"
+    )
+
+    print("Latest Run:")
+
+    for key, value in latest.items():
+
+        print(
+            f"  {key}: {value}"
+        )
+
+    print("\nPrevious Run:")
+
+    for key, value in previous.items():
+
+        print(
+            f"  {key}: {value}"
+        )
+
+    print("\nDifference:")
+
+    for key in latest:
+
+        old_value = previous[key]
+        new_value = latest[key]
+
+        diff = (
+            (
+                new_value - old_value
+            )
+            / old_value
+        ) * 100
+
+        print(
+            f"  {key}: {diff:.2f}%"
+        )
 
 @app.command()
 def report():

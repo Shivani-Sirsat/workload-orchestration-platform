@@ -2,6 +2,9 @@ import typer
 
 from cli.logger import logger
 from cli.config_loader import load_config
+from execution.execution_engine import (
+    execute_workload
+)
 from deployments.prerequisites import (
     validate_prerequisites
 )
@@ -94,12 +97,27 @@ def deploy(
 
 
 @app.command()
-def run():
-    """Run workload"""
+def run(
+    workload_name: str,
+    target: str
+):
 
-    logger.info("Run command executed")
+    result = execute_workload(
+        workload_name,
+        target
+    )
 
-    print("Running workload...")
+    if result["status"] == "failed":
+
+        print(
+            result["message"]
+        )
+
+        return
+
+    print(
+        result["output"]
+    )
 
 
 @app.command()

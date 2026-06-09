@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Benchmark Results
+results/*
+
+# Benchmark Logs
+logs/*
+
+# Keep folders
+!results/.gitkeep
+!logs/.gitkeep
+
+# Virtual Environment
+venv/

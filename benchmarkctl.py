@@ -243,14 +243,33 @@ def compare(
 
     print("\nDifference:")
 
-    for key in latest:
+    for key, value in latest.items():
 
-        old_value = previous[key]
-        new_value = latest[key]
+        if not isinstance(
+            value,
+            (int, float)
+        ):
+            continue
+
+        old_value = previous.get(key)
+
+        if not isinstance(
+            old_value,
+            (int, float)
+        ):
+            continue
+
+        if old_value == 0:
+
+            print(
+                f"  {key}: N/A"
+            )
+
+            continue
 
         diff = (
             (
-                new_value - old_value
+                value - old_value
             )
             / old_value
         ) * 100

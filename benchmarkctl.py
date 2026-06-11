@@ -2,6 +2,9 @@ import typer
 
 from cli.logger import logger
 from cli.config_loader import load_config
+from execution.report_reader import (
+    generate_report
+)
 from execution.result_reader import (
     load_result
 )
@@ -279,12 +282,93 @@ def compare(
         )
 
 @app.command()
-def report():
-    """Generate reports"""
+def report(
+    workload_name: str
+):
 
-    logger.info("Report command executed")
+    runs = generate_report(
+        workload_name
+    )
 
-    print("Generating reports...")
+    if not runs:
+
+        print(
+            "No report data found"
+        )
+
+        return
+
+    latest = runs[-1]
+
+    print(
+        f"\nBenchmark Report: {workload_name}\n"
+    )
+
+    print(
+        f"Total Runs: {len(runs)}"
+    )
+
+    print(
+        f"Target: {latest['target']}"
+    )
+
+    print(
+        f"Latest Run: {latest['timestamp']}"
+    )
+
+    numeric_fields = {}
+
+    for key, value in latest.items():
+
+        if isinstance(
+            value,
+            (int, float)
+        ):
+
+            numeric_fields[key] = []
+
+    for run in runs:
+
+        for key in numeric_fields:
+
+            numeric_fields[key].append(
+                run[key]
+            )
+
+    print("\nKPI Summary")
+
+    for key, values in numeric_fields.items():
+
+        latest_value = values[-1]
+
+        if "latency" in key.lower():
+
+            best_value = min(values)
+
+        else:
+
+            best_value = max(values)
+
+        average_value = (
+            sum(values)
+            / len(values)
+        )
+
+        print(
+            f"\n{key}"
+        )
+
+        print(
+            f"  Latest : {latest_value:.2f}"
+        )
+
+        print(
+            f"  Best   : {best_value:.2f}"
+        )
+
+        print(
+            f"  Average: {average_value:.2f}"
+        )
 
 @app.command()
 def validate():

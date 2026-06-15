@@ -2,7 +2,7 @@ import typer
 
 from cli.logger import logger
 from cli.config_loader import load_config
-from execution.report_reader import (
+from execution.report_reader_db import (
     generate_report
 )
 from execution.result_reader import (
@@ -14,7 +14,7 @@ from execution.execution_engine import (
 from deployments.prerequisites import (
     validate_prerequisites
 )
-from execution.history_reader import (
+from execution.history_reader_db import (
     load_history
 )
 from deployments.deployment_engine import deploy_workload
@@ -26,8 +26,8 @@ from deployments.setup_helper import (
     run_setup
 )
 
-from execution.compare_reader import (
-    load_latest_two_runs
+from execution.compare_reader_db import (
+    load_compare_data
 )
 
 from cli.workload_registry import (
@@ -211,7 +211,7 @@ def compare(
 ):
 
     previous, latest = (
-        load_latest_two_runs(
+        load_compare_data(
             workload_name
         )
     )
@@ -246,20 +246,28 @@ def compare(
 
     print("\nDifference:")
 
-    for key, value in latest.items():
+    for key in latest:
 
-        if not isinstance(
-            value,
-            (int, float)
-        ):
+        if key not in previous:
+
+            print(
+                f"  {key}: N/A"
+            )
+
             continue
 
-        old_value = previous.get(key)
+        old_value = previous[key]
+        new_value = latest[key]
 
         if not isinstance(
             old_value,
             (int, float)
         ):
+
+            print(
+                f"  {key}: N/A"
+            )
+
             continue
 
         if old_value == 0:
@@ -272,7 +280,7 @@ def compare(
 
         diff = (
             (
-                value - old_value
+                new_value - old_value
             )
             / old_value
         ) * 100
@@ -318,26 +326,48 @@ def report(
 
     numeric_fields = {}
 
-    for key, value in latest.items():
+    #
+    # Discover all numeric KPIs
+    #
 
-        if isinstance(
-            value,
-            (int, float)
-        ):
+    for run in runs:
 
-            numeric_fields[key] = []
+        for key, value in run.items():
+
+            if isinstance(
+                value,
+                (int, float)
+            ):
+
+                if key not in numeric_fields:
+
+                    numeric_fields[key] = []
+
+    #
+    # Collect KPI values
+    #
 
     for run in runs:
 
         for key in numeric_fields:
 
+            if key not in run:
+
+                continue
+
             numeric_fields[key].append(
                 run[key]
             )
 
-    print("\nKPI Summary")
+    print(
+        "\nKPI Summary"
+    )
 
     for key, values in numeric_fields.items():
+
+        if not values:
+
+            continue
 
         latest_value = values[-1]
 

@@ -41,19 +41,11 @@ def root():
     }
 
 
-@router.get(
-    "/workloads",
-    response_model=WorkloadsResponse
-)
+@router.get("/workloads")
 def workloads():
 
-    workloads = get_workloads()
-
     return {
-        "workloads": [
-            workload["name"]
-            for workload in workloads
-        ]
+        "workloads": get_workloads()
     }
 
 

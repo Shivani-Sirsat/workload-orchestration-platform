@@ -8,27 +8,8 @@
 
       <p>
         Execute, monitor and analyze benchmark workloads
-        across multiple execution environments.
+        across Docker and Kubernetes environments.
       </p>
-
-    </section>
-
-    <section class="summary">
-
-      <div class="summary-card">
-        <h3>Registered Workloads</h3>
-        <p>{{ workloads.length }}</p>
-      </div>
-
-      <div class="summary-card">
-        <h3>API Status</h3>
-        <p>Healthy</p>
-      </div>
-
-      <div class="summary-card">
-        <h3>Database</h3>
-        <p>Connected</p>
-      </div>
 
     </section>
 
@@ -39,50 +20,50 @@
       <div class="capability-grid">
 
         <div class="capability-card">
-          <h3>Workload Execution</h3>
+          <h3>Execute Workloads</h3>
           <p>
-            Execute benchmark workloads on
-            Docker and Kubernetes platforms.
-          </p>
-        </div>
-
-        <div class="capability-card">
-          <h3>Benchmark Reporting</h3>
-          <p>
-            Generate KPI reports for completed
-            workload executions.
+            Run benchmark workloads using Docker
+            and Kubernetes execution engines.
           </p>
         </div>
 
         <div class="capability-card">
           <h3>Historical Analysis</h3>
           <p>
-            View workload execution history
+            Review workload execution history
             stored in PostgreSQL.
           </p>
         </div>
 
         <div class="capability-card">
-          <h3>KPI Comparison</h3>
+          <h3>KPI Reporting</h3>
           <p>
-            Compare recent workload runs
-            and benchmark performance.
+            Generate benchmark KPI reports
+            from collected metrics.
           </p>
         </div>
 
         <div class="capability-card">
-          <h3>REST APIs</h3>
+          <h3>Compare Benchmark Runs</h3>
           <p>
-            Access workloads, history,
-            reports and comparison data.
+            Compare latest and previous workload
+            executions side by side.
           </p>
         </div>
 
         <div class="capability-card">
           <h3>PostgreSQL Storage</h3>
           <p>
-            Persist benchmark executions
-            and KPI results in database.
+            Persist execution results
+            in PostgreSQL.
+          </p>
+        </div>
+
+        <div class="capability-card">
+          <h3>REST APIs</h3>
+          <p>
+            Access workload data through
+            FastAPI endpoints.
           </p>
         </div>
 
@@ -90,17 +71,19 @@
 
     </section>
 
-    <section class="platform">
+    <section class="stack">
 
-      <h2>Supported Components</h2>
+      <h2>Technology Stack</h2>
 
-      <ul>
-        <li>Docker Execution Engine</li>
-        <li>Kubernetes Execution Engine</li>
-        <li>PostgreSQL Result Storage</li>
-        <li>FastAPI Backend Services</li>
-        <li>Vue.js Frontend Dashboard</li>
-      </ul>
+      <div class="stack-grid">
+
+        <div class="stack-card">Docker</div>
+        <div class="stack-card">Kubernetes</div>
+        <div class="stack-card">FastAPI</div>
+        <div class="stack-card">PostgreSQL</div>
+        <div class="stack-card">Vue.js</div>
+
+      </div>
 
     </section>
 
@@ -129,6 +112,8 @@ onMounted(async () => {
 
 .dashboard {
     padding: 40px;
+    background: #f5f7fa;
+    min-height: 100vh;
 }
 
 .hero {
@@ -142,32 +127,8 @@ onMounted(async () => {
 }
 
 .hero p {
-    font-size: 18px;
     color: #555;
-}
-
-.summary {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-}
-
-.summary-card {
-    flex: 1;
-    background: white;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.summary-card h3 {
-    color: #003c71;
-}
-
-.summary-card p {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 15px;
+    font-size: 18px;
 }
 
 .capabilities {
@@ -181,14 +142,13 @@ onMounted(async () => {
 
 .capability-grid {
     display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .capability-card {
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -198,20 +158,37 @@ onMounted(async () => {
     margin-bottom: 10px;
 }
 
-.platform h2 {
+.capability-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.stack h2 {
     color: #003c71;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.platform ul {
+.stack-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stack-card {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
+    padding: 15px 25px;
+    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: 600;
+    color: #003c71;
 }
 
-.platform li {
-    margin-bottom: 10px;
+@media (max-width: 900px) {
+
+    .capability-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 </style>

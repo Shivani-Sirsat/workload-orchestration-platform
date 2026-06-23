@@ -13,6 +13,40 @@
 
     </section>
 
+    <section class="summary">
+
+      <div class="summary-card">
+
+        <h3>Total Workloads</h3>
+
+        <p>
+          {{ totalWorkloads }}
+        </p>
+
+      </div>
+
+      <div class="summary-card">
+
+        <h3>API Status</h3>
+
+        <p>
+          {{ apiStatus }}
+        </p>
+
+      </div>
+
+      <div class="summary-card">
+
+        <h3>Database</h3>
+
+        <p>
+          {{ dbStatus }}
+        </p>
+
+      </div>
+
+    </section>
+
     <section class="capabilities">
 
       <h2>Key Capabilities</h2>
@@ -92,20 +126,41 @@
 </template>
 
 <script setup>
+
 import { ref, onMounted } from "vue";
 import api from "../services/api";
 
-const workloads = ref([]);
+const totalWorkloads = ref(0);
+const apiStatus = ref("Unknown");
+const dbStatus = ref("Connected");
 
 onMounted(async () => {
 
-    const response = await api.get(
-        "/workloads"
-    );
+    try {
 
-    workloads.value = response.data;
+        const response =
+            await api.get("/workloads");
+
+        totalWorkloads.value =
+            response.data.workloads.length;
+
+        apiStatus.value =
+            "Healthy";
+
+    } catch (error) {
+
+        console.error(error);
+
+        apiStatus.value =
+            "Unavailable";
+
+        dbStatus.value =
+            "Unknown";
+
+    }
 
 });
+
 </script>
 
 <style scoped>
@@ -129,6 +184,31 @@ onMounted(async () => {
 .hero p {
     color: #555;
     font-size: 18px;
+}
+
+.summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.summary-card {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.summary-card h3 {
+    color: #003c71;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #003c71;
 }
 
 .capabilities {
@@ -184,6 +264,10 @@ onMounted(async () => {
 }
 
 @media (max-width: 900px) {
+
+    .summary {
+        flex-direction: column;
+    }
 
     .capability-grid {
         grid-template-columns: 1fr;

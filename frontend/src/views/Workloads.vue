@@ -34,15 +34,21 @@
 
         <div class="actions">
 
-          <button>
+          <button
+            @click="openHistory(workload.name)"
+          >
             History
           </button>
 
-          <button>
+          <button
+            @click="openCompare(workload.name)"
+          >
             Compare
           </button>
 
-          <button>
+          <button
+            @click="openReport(workload.name)"
+          >
             Report
           </button>
 
@@ -58,9 +64,24 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 import api from "../services/api";
 
+const router = useRouter();
+
 const workloads = ref([]);
+
+const openHistory = (workloadName) => {
+    router.push(`/history/${workloadName}`);
+};
+
+const openCompare = (workloadName) => {
+    router.push(`/compare/${workloadName}`);
+};
+
+const openReport = (workloadName) => {
+    router.push(`/report/${workloadName}`);
+};
 
 onMounted(async () => {
 

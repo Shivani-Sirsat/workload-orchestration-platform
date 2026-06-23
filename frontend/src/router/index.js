@@ -19,15 +19,15 @@ const routes = [
         component: Workloads
     },
     {
-        path: "/history",
+        path: "/history/:workload",
         component: History
     },
     {
-        path: "/compare",
+        path: "/compare/:workload",
         component: Compare
     },
     {
-        path: "/report",
+        path: "/report/:workload",
         component: Report
     }
 ];
